@@ -5,6 +5,7 @@ public class WordFrequencyGame {
     public static final String WORD_DELIMITER = "\\s+";
     public static final String LINE_DELIMITER = "\n";
     public static final String SPACE_DELIMITER = " ";
+    public static final String CALCULATE_ERROR = "Calculate Error";
 
     public String getResult(String inputStr) {
 
@@ -40,7 +41,7 @@ public class WordFrequencyGame {
                 }
                 return joiner.toString();
             } catch (Exception e) {
-                return "Calculate Error";
+                return CALCULATE_ERROR;
             }
         }
     }
