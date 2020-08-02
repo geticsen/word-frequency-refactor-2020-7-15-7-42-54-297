@@ -7,15 +7,15 @@ public class WordFrequencyGame {
     public static final String SPACE_DELIMITER = " ";
     public static final String CALCULATE_ERROR = "Calculate Error";
 
-    public String getResult(String inputStr) {
+    public String getResult(String sentense) {
 
-        if (inputStr.split(WORD_DELIMITER).length == 1) {
-            return inputStr + " 1";
+        if (sentense.split(WORD_DELIMITER).length == 1) {
+            return sentense + " 1";
         } else {
 
             try {
 
-                String[] arr = inputStr.split(WORD_DELIMITER);
+                String[] arr = sentense.split(WORD_DELIMITER);
 
                 List<Input> inputList = new ArrayList<>();
                 for (String s : arr) {
