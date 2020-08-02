@@ -17,25 +17,25 @@ public class WordFrequencyGame {
 
                 String[] words = sentense.split(WORD_DELIMITER);
 
-                List<WordInfo> inputList = new ArrayList<>();
+                List<WordInfo> wordInfos = new ArrayList<>();
                 for (String word : words) {
                     WordInfo input = new WordInfo(word, 1);
-                    inputList.add(input);
+                    wordInfos.add(input);
                 }
 
-                Map<String, List<WordInfo>> map = getListMap(inputList);
+                Map<String, List<WordInfo>> map = getListMap(wordInfos);
 
                 List<WordInfo> list = new ArrayList<>();
                 for (Map.Entry<String, List<WordInfo>> entry : map.entrySet()) {
                     WordInfo input = new WordInfo(entry.getKey(), entry.getValue().size());
                     list.add(input);
                 }
-                inputList = list;
+                wordInfos = list;
 
-                inputList.sort((w1, w2) -> w2.getWordCount() - w1.getWordCount());
+                wordInfos.sort((w1, w2) -> w2.getWordCount() - w1.getWordCount());
 
                 StringJoiner joiner = new StringJoiner(LINE_DELIMITER);
-                for (WordInfo w : inputList) {
+                for (WordInfo w : wordInfos) {
                     String s = w.getValue() + SPACE_DELIMITER + w.getWordCount();
                     joiner.add(s);
                 }
