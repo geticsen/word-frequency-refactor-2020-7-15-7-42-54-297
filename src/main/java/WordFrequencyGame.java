@@ -4,6 +4,7 @@ public class WordFrequencyGame {
 
     public static final String WORD_DELIMITER = "\\s+";
     public static final String LINE_DELIMITER = "\n";
+    public static final String SPACE_DELIMITER = " ";
 
     public String getResult(String inputStr) {
 
@@ -34,7 +35,7 @@ public class WordFrequencyGame {
 
                 StringJoiner joiner = new StringJoiner(LINE_DELIMITER);
                 for (Input w : inputList) {
-                    String s = w.getValue() + " " + w.getWordCount();
+                    String s = w.getValue() + SPACE_DELIMITER + w.getWordCount();
                     joiner.add(s);
                 }
                 return joiner.toString();
