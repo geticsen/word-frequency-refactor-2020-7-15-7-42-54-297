@@ -15,10 +15,10 @@ public class WordFrequencyGame {
 
             try {
 
-                String[] arr = sentense.split(WORD_DELIMITER);
+                String[] words = sentense.split(WORD_DELIMITER);
 
                 List<Input> inputList = new ArrayList<>();
-                for (String s : arr) {
+                for (String s : words) {
                     Input input = new Input(s, 1);
                     inputList.add(input);
                 }
