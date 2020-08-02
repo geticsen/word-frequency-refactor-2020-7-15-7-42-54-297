@@ -1,15 +1,18 @@
 import java.util.*;
 
 public class WordFrequencyGame {
+
+    public static final String WORD_DELIMITER = "\\s+";
+
     public String getResult(String inputStr) {
 
-        if (inputStr.split("\\s+").length == 1) {
+        if (inputStr.split(WORD_DELIMITER).length == 1) {
             return inputStr + " 1";
         } else {
 
             try {
 
-                String[] arr = inputStr.split("\\s+");
+                String[] arr = inputStr.split(WORD_DELIMITER);
 
                 List<Input> inputList = new ArrayList<>();
                 for (String s : arr) {
